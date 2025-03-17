@@ -1,0 +1,24 @@
+object sobreF: TsobreF
+  Left = 315
+  Height = 580
+  Top = 176
+  Width = 535
+  Caption = 'SOBRE'
+  ClientHeight = 580
+  ClientWidth = 535
+  LCLVersion = '3.4.0.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 138
+    Top = 0
+    Width = 535
+    Align = alTop
+    Lines.Strings = (
+      'Versão:1.0'
+      'Feito no curso SABER-TI ministrado pelo Victor Pedroso'
+      'Sistema feito por Pedro Antonio'
+    )
+    ReadOnly = True
+    TabOrder = 0
+  end
+end

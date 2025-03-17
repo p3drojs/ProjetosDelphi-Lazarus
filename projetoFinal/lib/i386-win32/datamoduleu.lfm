@@ -1,0 +1,29 @@
+object dataModuleMD: TdataModuleMD
+  OldCreateOrder = False
+  Height = 238
+  HorizontalOffset = 303
+  VerticalOffset = 126
+  Width = 235
+  object mainConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = '123]5'
+    Protocol = 'postgresql'
+    Left = 69
+    Top = 42
+  end
+  object qryGenerica: TZQuery
+    Connection = mainConnection
+    Params = <>
+    Left = 152
+    Top = 40
+  end
+end

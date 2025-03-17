@@ -1,0 +1,271 @@
+inherited cadUsuariosF: TcadUsuariosF
+  Left = 457
+  Height = 651
+  Top = 205
+  Width = 828
+  Caption = 'CADASTRO DE USUARIOS'
+  ClientHeight = 651
+  ClientWidth = 828
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited mainPageControl: TPageControl
+    Height = 651
+    Width = 828
+    ActivePage = registerTab
+    TabIndex = 1
+    inherited searchTab: TTabSheet
+      ClientHeight = 618
+      ClientWidth = 820
+      inherited topGroupBox: TGroupBox
+        Width = 820
+        ClientHeight = 106
+        ClientWidth = 816
+        inherited searchButton: TSpeedButton
+          OnClick = searchButtonClick
+        end
+        inherited searhEdt: TEdit
+          Height = 28
+        end
+        inherited Label1: TLabel
+          Height = 20
+          Width = 81
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      inherited bottomGroupBox: TGroupBox
+        Top = 487
+        Width = 820
+        ClientHeight = 106
+        ClientWidth = 816
+        inherited newButton: TSpeedButton
+          Anchors = [akLeft]
+          OnClick = newButtonClick
+        end
+        inherited leaveButton: TSpeedButton
+          Left = 680
+          Anchors = [akRight]
+          OnClick = leaveButtonClick
+        end
+      end
+      inherited showGrid: TDBGrid
+        Height = 356
+        Top = 131
+        Width = 820
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID:'
+            Width = 20
+            FieldName = 'id'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'USUARIO:'
+            Width = 70
+            FieldName = 'usuario'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'NOME COMPLETO'
+            Width = 120
+            FieldName = 'nome_completo'
+          end>
+        DataSource = dsUsuarios
+        OnDblClick = showGridDblClick
+      end
+    end
+    inherited registerTab: TTabSheet
+      ClientHeight = 618
+      ClientWidth = 820
+      inherited saveButton: TSpeedButton
+        Left = 16
+        Top = 560
+        Anchors = [akLeft]
+        OnClick = saveButtonClick
+      end
+      inherited editButton: TSpeedButton
+        Left = 141
+        Top = 560
+        Anchors = [akLeft]
+        OnClick = editButtonClick
+      end
+      inherited excludeButton: TSpeedButton
+        Left = 271
+        Top = 560
+        Anchors = [akLeft]
+        OnClick = excludeButtonClick
+      end
+      inherited goBackButton: TSpeedButton
+        Left = 672
+        Top = 560
+        Anchors = [akRight]
+        OnClick = goBackButtonClick
+      end
+      object idUser: TDBEdit[4]
+        Left = 32
+        Height = 28
+        Top = 32
+        Width = 40
+        DataField = 'id'
+        DataSource = dsUsuarios
+        ReadOnly = True
+        Color = 11842740
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object idLabel: TLabel[5]
+        Left = 8
+        Height = 20
+        Top = 40
+        Width = 20
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object userNameLabel: TLabel[6]
+        Left = 8
+        Height = 20
+        Top = 72
+        Width = 146
+        Caption = 'NOME DO USUARIO:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object userNameEdt: TDBEdit[7]
+        Left = 160
+        Height = 28
+        Top = 64
+        Width = 104
+        DataField = 'usuario'
+        DataSource = dsUsuarios
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object passwordEdt: TDBEdit[8]
+        Left = 72
+        Height = 28
+        Top = 128
+        Width = 64
+        DataField = 'senha'
+        DataSource = dsUsuarios
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object completeNameEdt: TDBEdit[9]
+        Left = 144
+        Height = 28
+        Top = 96
+        Width = 312
+        DataField = 'nome_completo'
+        DataSource = dsUsuarios
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object passwordLabel: TLabel[10]
+        Left = 8
+        Height = 20
+        Top = 136
+        Width = 54
+        Caption = 'SENHA:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object completeNameLabel: TLabel[11]
+        Left = 8
+        Height = 20
+        Top = 104
+        Width = 131
+        Caption = 'NOME COMPLETO:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object informLabel: TLabel[12]
+        Left = 144
+        Height = 20
+        Top = 136
+        Width = 73
+        Caption = '(6 digitos)'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+  end
+  object updUsuarios: TZUpdateSQL[1]
+    UseSequenceFieldForRefreshSQL = False
+    Left = 552
+    Top = 216
+  end
+  object qryUsuarios: TZQuery[2]
+    Connection = dataModuleMD.mainConnection
+    AfterInsert = qryUsuariosAfterInsert
+    SQL.Strings = (
+      'select * from usuarios'
+    )
+    Params = <>
+    Left = 496
+    Top = 216
+    object qryUsuariosid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosusuario: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryUsuariosnome_completo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryUsuariossenha: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+  object dsUsuarios: TDataSource[3]
+    DataSet = qryUsuarios
+    Left = 440
+    Top = 216
+  end
+end

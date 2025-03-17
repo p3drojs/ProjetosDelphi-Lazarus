@@ -1,0 +1,124 @@
+object relOrcaF: TrelOrcaF
+  Left = 996
+  Height = 221
+  Top = 184
+  Width = 352
+  Caption = 'RELATORIO DE ORÇAMENTOS'
+  ClientHeight = 221
+  ClientWidth = 352
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object relOrcaBtn: TBitBtn
+    Left = 72
+    Height = 54
+    Top = 88
+    Width = 192
+    Caption = 'RELATORIO DE ORÇAMENTOS'
+    Glyph.Data = {
+      76030000424D7603000000000000360000002800000011000000100000000100
+      18000000000040030000C30E0000C30E00000000000000000000BFBFBFBFBFBF
+      BFBFBFFF0000FF0000FF00000000000000000000000000000000000000000000
+      00000000000000BFBFBFBFBFBF00BFBFBFBFBFBF000000FF0000FF0000FF0000
+      7F7F7FBFBF007F7F7FBFBF007F7F7FBFBF007F7F7FBFBF007F7F7F000000BFBF
+      BF00BFBFBFBFBFBF000000FF0000FF0000FF0000000000000000000000000000
+      000000000000000000000000000000000000BFBFBF00BFBFBF000000BFBF00FF
+      0000FF0000FF0000BFBF00BFBF00BFBF00BFBF00BFBF00BFBF00BFBF00BFBF00
+      BFBF00BFBF0000000000BFBFBF000000BFBF00FF0000FF0000FF0000BFBF00BF
+      BF00BFBF00BFBF00BFBF00BFBF000000FF0000FF0000FFBFBF0000000000BFBF
+      BFBFBFBF000000FF0000FF0000FF000000000000000000000000000000000000
+      0000000000000000000000000000BFBFBF00BFBFBFBFBFBFBFBFBFFF0000FF00
+      00FF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000BFBF00000000BF
+      BFBFBFBFBF00BFBFBFBFBFBFBFBFBFFF0000FF0000FF0000FFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF000000000000000000BFBFBFBFBFBF00BFBFBFBFBFBF
+      FF0000FF0000FF0000FF0000FF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00BFBFBFBFBFBFBFBFBFBFBFBF00BFBFBFFF0000FF0000FF0000000000FF0000
+      FF0000FF0000FFFFFFFFFFFFFFFFFFFFFFFF000000BFBFBFBFBFBFBFBFBFBFBF
+      BF00BFBFBFFF0000FF0000BFBFBF000000FFFFFFFF0000FF0000FFFFFFFFFFFF
+      FFFFFFFFFFFF000000BFBFBFBFBFBFBFBFBFBFBFBF00BFBFBFFF0000FF0000BF
+      BFBF000000FFFFFFFF0000FF0000FFFFFFFFFFFFFFFFFFFFFFFF000000BFBFBF
+      BFBFBFBFBFBFBFBFBF00BFBFBFBFBFBFFF0000BFBFBF000000FFFFFFFF0000FF
+      FFFFFFFFFF000000000000000000000000BFBFBFBFBFBFBFBFBFBFBFBF00BFBF
+      BFBFBFBFBFBFBFBFBFBF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF00
+      0000BFBFBFBFBFBFBFBFBFBFBFBFBFBFBF00BFBFBFBFBFBFBFBFBFBFBFBF0000
+      00FFFFFFFFFFFFFFFFFFFFFFFF000000000000BFBFBFBFBFBFBFBFBFBFBFBFBF
+      BFBFBFBFBF00BFBFBFBFBFBFBFBFBFBFBFBF0000000000000000000000000000
+      00000000BFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBF00
+    }
+    OnClick = relOrcaBtnClick
+    TabOrder = 0
+  end
+  object qryRelOrca: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+    Params = <>
+    Left = 152
+    Top = 11
+    object qryRelOrcaorcamentoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcaclienteid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcadt_orcamento: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcadt_validade_orcamento: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcavl_total_orcamento: TZBCDField
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 15
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+  object frDbRelOrca: TfrDBDataSet
+    DataSet = qryRelOrca
+    Left = 96
+    Top = 11
+  end
+  object frRelOrca: TfrReport
+    Dataset = frDbRelOrca
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 40
+    Top = 11
+  end
+end

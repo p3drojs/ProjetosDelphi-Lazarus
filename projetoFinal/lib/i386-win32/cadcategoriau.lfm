@@ -1,0 +1,167 @@
+inherited cadCategoriasF: TcadCategoriasF
+  Left = 1083
+  Height = 511
+  Top = 208
+  Caption = 'CADASTRO DE CATEGORIAS'
+  ClientHeight = 511
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited mainPageControl: TPageControl
+    Height = 511
+    ActivePage = registerTab
+    TabIndex = 1
+    inherited searchTab: TTabSheet
+      ClientHeight = 483
+      inherited topGroupBox: TGroupBox
+        inherited searchButton: TSpeedButton
+          OnClick = searchButtonClick
+        end
+        inherited Label1: TLabel
+          Width = 65
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      inherited bottomGroupBox: TGroupBox
+        Top = 378
+        inherited newButton: TSpeedButton
+          OnClick = newButtonClick
+        end
+        inherited leaveButton: TSpeedButton
+          OnClick = leaveButtonClick
+        end
+      end
+      inherited showGrid: TDBGrid
+        Height = 273
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            Width = 20
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Layout = tlBottom
+            Title.Caption = 'DESCRIÇÃO:'
+            Width = 575
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsCategorias
+        OnDblClick = showGridDblClick
+      end
+    end
+    inherited registerTab: TTabSheet
+      ClientHeight = 483
+      inherited saveButton: TSpeedButton
+        Left = 16
+        Top = 424
+        OnClick = saveButtonClick
+      end
+      inherited editButton: TSpeedButton
+        Left = 116
+        Top = 424
+        OnClick = editButtonClick
+      end
+      inherited excludeButton: TSpeedButton
+        Left = 220
+        Top = 424
+        OnClick = excludeButtonClick
+      end
+      inherited goBackButton: TSpeedButton
+        Left = 520
+        Top = 424
+        OnClick = goBackButtonClick
+      end
+      object idCatEdt: TDBEdit[4]
+        Left = 48
+        Height = 23
+        Top = 32
+        Width = 20
+        DataField = 'categoriaprodutoid'
+        DataSource = dsCategorias
+        ReadOnly = True
+        Color = 11842740
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object idLabel: TLabel[5]
+        Left = 18
+        Height = 15
+        Top = 40
+        Width = 16
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object descLabel: TLabel[6]
+        Left = 18
+        Height = 15
+        Top = 72
+        Width = 57
+        Caption = 'Descrição:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object dsCatEdt: TDBEdit[7]
+        Left = 80
+        Height = 23
+        Top = 64
+        Width = 168
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCategorias
+        MaxLength = 0
+        TabOrder = 0
+      end
+    end
+  end
+  object UpdCategorias: TZUpdateSQL[1]
+    UseSequenceFieldForRefreshSQL = False
+    Left = 504
+    Top = 56
+  end
+  object dsCategorias: TDataSource[2]
+    DataSet = qryCategorias
+    Left = 344
+    Top = 56
+  end
+  object qryCategorias: TZQuery[3]
+    Connection = dataModuleMD.mainConnection
+    AfterInsert = qryCategoriasAfterInsert
+    SQL.Strings = (
+      'select * from categoria_produto'
+    )
+    Params = <>
+    Left = 424
+    Top = 56
+    object qryCategoriascategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCategoriasds_categoria_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+end

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="projectFInalPedroA.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="117" Y="11"/>
+        <UsageCount Value="80"/>
+      </Unit>
+      <Unit>
+        <Filename Value="xcadpaiu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="xCadPai"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="xCadPaiU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="50" Y="31"/>
+        <UsageCount Value="80"/>
+      </Unit>
+      <Unit>
+        <Filename Value="datamoduleu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dataModuleMD"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="dataModuleU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="63" Y="30"/>
+        <UsageCount Value="79"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mainmenuu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="mainMenuF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mainMenuU"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="160"/>
+        <CursorPos X="18" Y="175"/>
+        <UsageCount Value="79"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastrou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="registerTabF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadastroU"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="215"/>
+        <CursorPos X="4" Y="218"/>
+        <UsageCount Value="79"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoriau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategoriasF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCategoriaU"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="58"/>
+        <CursorPos X="37" Y="58"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="77"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadprodutosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProdutosU"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="112"/>
+        <CursorPos X="99" Y="121"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="76"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="selecadprodu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="selectCadF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="seleCadProdU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="49"/>
+        <UsageCount Value="73"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadusuariosu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadUsuariosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadUsuariosU"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="118"/>
+        <CursorPos X="116" Y="128"/>
+        <UsageCount Value="70"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadorcamentou.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamentoU"/>
+        <TopLine Value="148"/>
+        <CursorPos X="122" Y="155"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="seleclienteorcau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="seleClienteOrcaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="seleClienteOrcaU"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="51"/>
+        <CursorPos Y="64"/>
+        <UsageCount Value="66"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="selecprodorcau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="selecProdOrcaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="selecProdOrcaU"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="96"/>
+        <CursorPos X="28" Y="99"/>
+        <UsageCount Value="65"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="sobreu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="sobreF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="sobreU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="9" Y="23"/>
+        <UsageCount Value="57"/>
+      </Unit>
+      <Unit>
+        <Filename Value="loginscreenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="loginScreenF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="loginScreenU"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="62"/>
+        <CursorPos X="119" Y="68"/>
+        <UsageCount Value="57"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="selecprodu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="selecProdF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="selecProdU"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="88"/>
+        <CursorPos Y="102"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relaclienteu.pas"/>
+        <ComponentName Value="relaClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relaClienteU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="24"/>
+        <CursorPos X="4" Y="57"/>
+        <UsageCount Value="62"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relprodu.pas"/>
+        <ComponentName Value="relProdF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relProdU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="3" Y="47"/>
+        <UsageCount Value="58"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relorca.pas"/>
+        <ComponentName Value="relOrcaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relOrca"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="5" Y="61"/>
+        <UsageCount Value="57"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relcatu.pas"/>
+        <ComponentName Value="relCatF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relCatU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="26" Y="44"/>
+        <UsageCount Value="57"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1801"/>
+        <CursorPos X="23" Y="1819"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\sysutils\sysstr.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1350"/>
+        <CursorPos X="10" Y="1377"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\Downloads\zeosdbo-8.0.0-stable (1)\src\component\ZDatasetParam.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="792"/>
+        <CursorPos X="14" Y="808"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\zeosdbo-8.0.0-stable (1)\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2062"/>
+        <CursorPos Y="2073"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\zeosdbo-8.0.0-stable (1)\src\dbc\ZDbcPooled.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1083"/>
+        <CursorPos Y="1095"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="110"/>
+        <CursorPos Y="122"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2965"/>
+        <CursorPos Y="2978"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\speedbutton.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1012"/>
+        <CursorPos Y="1026"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\dbctrls.pp"/>
+        <UnitName Value="DBCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1658"/>
+        <CursorPos Y="1670"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\zeosdbo-8.0.0-stable (1)\src\component\ZAbstractDataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="741"/>
+        <CursorPos Y="752"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5424"/>
+        <CursorPos Y="5435"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2797"/>
+        <CursorPos Y="2809"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="670"/>
+        <CursorPos Y="681"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="394"/>
+        <CursorPos Y="413"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos Y="56"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\buttons.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="158"/>
+        <CursorPos Y="170"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\bitbtn.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos Y="68"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\zeosdbo-8.0.0-stable (1)\src\component\ZSqlUpdate.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="970"/>
+        <CursorPos Y="981"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="76" Column="5" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="142" Column="3" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="110" Column="3" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="142" Column="3" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="143" Column="3" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="144" Column="3" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="146" Column="3" TopLine="126"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="150" Column="3" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="151" Column="3" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="152" Column="3" TopLine="132"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="153" Column="3" TopLine="133"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="152" Column="3" TopLine="132"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="153" Column="3" TopLine="133"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="158" Column="3" TopLine="138"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="159" Column="3" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="160" Column="3" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="161" Column="3" TopLine="141"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="163" Column="3" TopLine="143"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="164" Column="3" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="165" Column="3" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="166" Column="3" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="173" Column="3" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="90" Column="66" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="169" Column="3" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="176" Column="16" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="121" Column="16" TopLine="117"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="108" Column="3" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="121" Column="3" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="mainmenuu.pas"/>
+        <Caret Line="108" Column="113" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamentou.pas"/>
+        <Caret Line="150" Column="3" TopLine="148"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

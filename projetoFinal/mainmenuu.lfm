@@ -1,0 +1,342 @@
+object mainMenuF: TmainMenuF
+  Left = 1127
+  Height = 475
+  Top = 295
+  Width = 776
+  Caption = 'MENU PRINCIPAL'
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '3.8.0.0'
+  WindowState = wsFullScreen
+  object MainMenu1: TMainMenu
+    Left = 36
+    Top = 13
+    object registerMenu: TMenuItem
+      Caption = 'CADASTROS'
+      object clientsSubMenu: TMenuItem
+        Caption = 'CLIENTES'
+        OnClick = clientsSubMenuClick
+      end
+      object catSubMenu: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = catSubMenuClick
+      end
+      object productSubMenu: TMenuItem
+        Caption = 'PRODUTOS'
+        OnClick = productSubMenuClick
+      end
+      object userSubMenu: TMenuItem
+        Caption = 'USUARIOS'
+        OnClick = userSubMenuClick
+      end
+    end
+    object sellsMenu: TMenuItem
+      Caption = 'VENDAS'
+      object orcaSubMenu: TMenuItem
+        Caption = 'ORÇAMENTO'
+        OnClick = orcaSubMenuClick
+      end
+    end
+    object relatorMenu: TMenuItem
+      Caption = 'RELATORIO'
+      object clientesSubMenu: TMenuItem
+        Caption = 'CLIENTES'
+        OnClick = clientesSubMenuClick
+      end
+      object prodSubMenu: TMenuItem
+        Caption = 'PRODUTOS'
+        OnClick = prodSubMenuClick
+      end
+      object orcaRelSubMenu: TMenuItem
+        Caption = 'ORÇAMENTO'
+        OnClick = orcaRelSubMenuClick
+      end
+      object catRelSubMenu: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = catRelSubMenuClick
+      end
+    end
+    object sobreMenu: TMenuItem
+      Caption = 'SOBRE'
+      OnClick = sobreMenuClick
+    end
+    object leaveButton: TMenuItem
+      Caption = 'SAIR'
+      OnClick = leaveButtonClick
+    end
+  end
+  object qryRelClientes: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from cliente'
+    )
+    Params = <>
+    Left = 648
+    Top = 96
+    object qryRelClientesclienteid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelClientestipo_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qryRelClientescpf_cnpj_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object qryRelClientesnome_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+  object frDBRelClientes: TfrDBDataSet
+    DataSet = qryRelClientes
+    Left = 646
+    Top = 32
+  end
+  object frRelClientes: TfrReport
+    Dataset = frDBRelClientes
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 646
+    Top = 152
+  end
+  object frDBRelrcamentos: TfrDBDataSet
+    DataSet = qryRelOrcamentos
+    Left = 648
+    Top = 224
+  end
+  object frRelOrcamento: TfrReport
+    Dataset = frDBRelrcamentos
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 648
+    Top = 360
+  end
+  object qryRelOrcamentos: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+    Params = <>
+    Left = 648
+    Top = 288
+    object qryRelOrcamentosorcamentoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcamentosclienteid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcamentosdt_orcamento: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcamentosdt_validade_orcamento: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelOrcamentosvl_total_orcamento: TZBCDField
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 15
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+  object qryRelCategorias: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from categoria_produto'
+    )
+    Params = <>
+    Left = 552
+    Top = 96
+    object qryRelCategoriascategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelCategoriasds_categoria_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object frDBCategorias: TfrDBDataSet
+    DataSet = qryRelCategorias
+    Left = 552
+    Top = 32
+  end
+  object frRelCategorias: TfrReport
+    Dataset = frDBCategorias
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 552
+    Top = 152
+  end
+  object frDBRelProdutos: TfrDBDataSet
+    DataSet = qryRelProdutos
+    Left = 552
+    Top = 224
+  end
+  object frRelProdutos: TfrReport
+    Dataset = frDBRelProdutos
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 552
+    Top = 360
+  end
+  object qryRelProdutos: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from produto'
+    )
+    Params = <>
+    Left = 552
+    Top = 288
+    object qryRelProdutosprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelProdutoscategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelProdutosds_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_produto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryRelProdutosobs_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'obs_produto'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object qryRelProdutosvl_venda_produto: TZBCDField
+      FieldKind = fkData
+      FieldName = 'vl_venda_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 15
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object qryRelProdutosdt_cadastro_produto: TZDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_cadastro_produto'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelProdutosstatus_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'status_produto'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+  end
+end

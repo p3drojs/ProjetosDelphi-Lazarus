@@ -1,0 +1,154 @@
+object selectCadF: TselectCadF
+  Left = 893
+  Height = 555
+  Top = 331
+  Width = 651
+  Caption = 'SELEÇÃO DE CATEGORIA'
+  ClientHeight = 555
+  ClientWidth = 651
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '3.8.0.0'
+  object mainPageSelectCat: TPageControl
+    Left = 0
+    Height = 555
+    Top = 0
+    Width = 651
+    ActivePage = searchCat
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object searchCat: TTabSheet
+      Caption = 'PESQUISAR'
+      ClientHeight = 522
+      ClientWidth = 643
+      object bottomGB: TGroupBox
+        Left = 0
+        Height = 131
+        Top = 391
+        Width = 643
+        Align = alBottom
+        ClientHeight = 106
+        ClientWidth = 639
+        TabOrder = 0
+        object saveBtn: TButton
+          Left = 30
+          Height = 31
+          Top = 40
+          Width = 94
+          Caption = 'SALVAR'
+          TabOrder = 0
+          OnClick = saveBtnClick
+        end
+      end
+      object topGB: TGroupBox
+        Left = 0
+        Height = 131
+        Top = 0
+        Width = 643
+        Align = alTop
+        ClientHeight = 106
+        ClientWidth = 639
+        TabOrder = 1
+        object searchCatLabel: TLabel
+          Left = 20
+          Height = 20
+          Top = 40
+          Width = 81
+          Caption = 'PESQUISAR'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object searchCatEdt: TEdit
+          Left = 100
+          Height = 28
+          Top = 30
+          Width = 120
+          TabOrder = 0
+          OnChange = searchCatEdtChange
+        end
+        object searchCatBtn: TSpeedButton
+          Left = 230
+          Height = 28
+          Top = 31
+          Width = 29
+          Glyph.Data = {
+            42010000424D4201000000000000760000002800000011000000110000000100
+            040000000000CC00000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+            DDDDD0000000D00DDDDDDDDDDDDDD0000000D000DDDDDDDDDDDDD0000000DD00
+            0DDDDDDDDDDDD0000000DDD000D800008DDDD0000000DDDD0000777700DDD000
+            0000DDDDD08EE777780DD0000000DDDD807E77777708D0000000DDDD07E77777
+            7770D0000000DDDD077777777770D0000000DDDD077777777E70D0000000DDDD
+            077777777E70D0000000DDDD80777777EE08D0000000DDDDD08777EEE80DD000
+            0000DDDDDD00777700DDD0000000DDDDDDD800008DDDD0000000DDDDDDDDDDDD
+            DDDDD0000000
+          }
+        end
+      end
+      object gridCatProd: TDBGrid
+        Left = 0
+        Height = 260
+        Top = 131
+        Width = 643
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            Width = 25
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            Title.Caption = 'DESCRIÇÃO CATEGORIA'
+            Width = 184
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsCategoriasProd
+        Font.Name = 'ID'
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+        OnDblClick = gridCatProdDblClick
+      end
+    end
+  end
+  object dsCategoriasProd: TDataSource
+    DataSet = qryCatProd
+    Left = 510
+    Top = 100
+  end
+  object qryCatProd: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from CATEGORIA_PRODUTO'
+    )
+    Params = <>
+    Left = 400
+    Top = 70
+    object qryCatProdcategoriaprodutoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCatProdds_categoria_produto: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+end

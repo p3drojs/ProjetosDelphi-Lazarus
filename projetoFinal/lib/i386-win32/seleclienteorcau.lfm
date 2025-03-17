@@ -1,0 +1,202 @@
+object seleClienteOrcaF: TseleClienteOrcaF
+  Left = 572
+  Height = 500
+  Top = 192
+  Width = 583
+  Caption = 'SELECIONE O CLIENTE'
+  ClientHeight = 0
+  ClientWidth = 0
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object showClientsGrid: TDBGrid
+    Left = 0
+    Height = 290
+    Top = 105
+    Width = 583
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 20
+        FieldName = 'clienteid'
+      end    
+      item
+        Title.Caption = 'TIPO:'
+        Width = 34
+        FieldName = 'tipo_cliente'
+      end    
+      item
+        Title.Caption = 'CPF/CNPJ:'
+        FieldName = 'cpf_cnpj_cliente'
+      end    
+      item
+        Title.Caption = 'NOME:'
+        Width = 110
+        FieldName = 'nome_cliente'
+      end>
+    DataSource = dsSeleClienteOrcaU
+    ReadOnly = True
+    TabOrder = 0
+    OnDblClick = showClientsGridDblClick
+  end
+  object topGB: TGroupBox
+    Left = 0
+    Height = 105
+    Top = 0
+    Width = 583
+    Align = alTop
+    ClientHeight = 85
+    ClientWidth = 579
+    TabOrder = 1
+    object searchEdt: TEdit
+      Left = 104
+      Height = 23
+      Top = 24
+      Width = 120
+      TabOrder = 0
+    end
+    object searchButton: TSpeedButton
+      Left = 232
+      Height = 24
+      Top = 24
+      Width = 23
+      Glyph.Data = {
+        42010000424D4201000000000000760000002800000011000000110000000100
+        040000000000CC00000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+        DDDDD0000000D00DDDDDDDDDDDDDD0000000D000DDDDDDDDDDDDD0000000DD00
+        0DDDDDDDDDDDD0000000DDD000D800008DDDD0000000DDDD0000777700DDD000
+        0000DDDDD08EE777780DD0000000DDDD807E77777708D0000000DDDD07E77777
+        7770D0000000DDDD077777777770D0000000DDDD077777777E70D0000000DDDD
+        077777777E70D0000000DDDD80777777EE08D0000000DDDDD08777EEE80DD000
+        0000DDDDDD00777700DDD0000000DDDDDDD800008DDDD0000000DDDDDDDDDDDD
+        DDDDD0000000
+      }
+      OnClick = searchButtonClick
+    end
+    object searchLabel: TLabel
+      Left = 40
+      Height = 15
+      Top = 32
+      Width = 65
+      Caption = 'PESQUISAR'
+      Font.CharSet = ANSI_CHARSET
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object bottomGB: TGroupBox
+    Left = 0
+    Height = 105
+    Top = 395
+    Width = 583
+    Align = alBottom
+    ClientHeight = 85
+    ClientWidth = 579
+    TabOrder = 2
+    object selecBtn: TSpeedButton
+      Left = 34
+      Height = 22
+      Top = 17
+      Width = 102
+      Caption = 'SELECIONAR'
+      Glyph.Data = {
+        96010000424DB001000000000000760000002800000018000000180000000100
+        0400000000002001000000000000000000000000000000000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+        DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD88888888888888888DDDDDD0
+        000800000008000088DDDD03333087708880333308DDDD033330877088803333
+        08DDDD03333087708880333308DDDD03333087708880333308DDDD0333308770
+        8880333308DDDD03333088808880333308DDDD03333000000007333308DDDD03
+        333333333333333308DDDD03333333333333333308DDDD033330000000033333
+        08DDDD03330FFFFFFFF0333308DDDD03330F444444F0333308DDDD03330FFF44
+        44F0333308DDDD03330FF44444F0333308DDDD03330F444444F0333308DDDD03
+        3384444F44F0308308DDDD03334444FFFFF0308308DDDD008444480000000800
+        0DDDDDDD4444DDDDDDDDDDDDDDDDDDD4444DDDDDDDDDDDDDDDDD
+      }
+      OnClick = selecBtnClick
+    end
+    object goBackBtn: TSpeedButton
+      Left = 464
+      Height = 22
+      Top = 24
+      Width = 79
+      Caption = 'VOLTAR'
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        0400000000008000000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+        7777777777777777777777777777777777777777777777777777777777777777
+        7777777777777778477777444447777748777744447777777477774447777777
+        7477774474777777747777477744777748777777777744448777777777777777
+        7777777777777777777777777777777777777777777777777777
+      }
+      OnClick = goBackBtnClick
+    end
+  end
+  object qrySeleClienteOrca: TZQuery
+    Connection = dataModuleMD.mainConnection
+    SQL.Strings = (
+      'select * from cliente'
+    )
+    Params = <>
+    Left = 512
+    Top = 30
+    object qrySeleClienteOrcaclienteid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrySeleClienteOrcatipo_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qrySeleClienteOrcacpf_cnpj_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object qrySeleClienteOrcanome_cliente: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+  object updSeleClienteOrcaU: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 512
+    Top = 96
+  end
+  object dsSeleClienteOrcaU: TDataSource
+    DataSet = qrySeleClienteOrca
+    Left = 512
+    Top = 160
+  end
+end

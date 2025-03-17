@@ -1,0 +1,70 @@
+object mainMenuF: TmainMenuF
+  Left = 354
+  Height = 220
+  Top = 299
+  Width = 320
+  Caption = 'MENU PRINCIPAL'
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '3.4.0.0'
+  WindowState = wsFullScreen
+  object MainMenu1: TMainMenu
+    Left = 29
+    Top = 10
+    object registerMenu: TMenuItem
+      Caption = 'CADASTROS'
+      object clientsSubMenu: TMenuItem
+        Caption = 'CLIENTES'
+        OnClick = clientsSubMenuClick
+      end
+      object catSubMenu: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = catSubMenuClick
+      end
+      object productSubMenu: TMenuItem
+        Caption = 'PRODUTOS'
+        OnClick = productSubMenuClick
+      end
+      object userSubMenu: TMenuItem
+        Caption = 'USUARIOS'
+        OnClick = userSubMenuClick
+      end
+    end
+    object sellsMenu: TMenuItem
+      Caption = 'VENDAS'
+      object orcaSubMenu: TMenuItem
+        Caption = 'ORÇAMENTO'
+        OnClick = orcaSubMenuClick
+      end
+    end
+    object relatorMenu: TMenuItem
+      Caption = 'RELATORIO'
+      object clientesSubMenu: TMenuItem
+        Caption = 'CLIENTES'
+        OnClick = clientesSubMenuClick
+      end
+      object prodSubMenu: TMenuItem
+        Caption = 'PRODUTOS'
+        OnClick = prodSubMenuClick
+      end
+      object orcaRelSubMenu: TMenuItem
+        Caption = 'ORÇAMENTO'
+        OnClick = orcaRelSubMenuClick
+      end
+      object catRelSubMenu: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = catRelSubMenuClick
+      end
+    end
+    object sobreMenu: TMenuItem
+      Caption = 'SOBRE'
+      OnClick = sobreMenuClick
+    end
+    object leaveButton: TMenuItem
+      Caption = 'SAIR'
+      OnClick = leaveButtonClick
+    end
+  end
+end

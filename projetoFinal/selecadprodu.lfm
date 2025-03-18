@@ -100,8 +100,9 @@ object selectCadF: TselectCadF
         Color = clWindow
         Columns = <        
           item
+            Title.Alignment = taCenter
             Title.Caption = 'ID'
-            Width = 25
+            Width = 40
             FieldName = 'categoriaprodutoid'
           end        
           item

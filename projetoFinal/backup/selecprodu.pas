@@ -119,7 +119,7 @@ end;
 procedure TselecProdF.FormShow(Sender: TObject);
 begin
   cadOrcamentoF.qryOrcamentoItem.Edit;
-  cadOrcamentoF.qryOrcamentoItem.FieldByName('QT_PRODUTO').Asinteger := 0;
+  //cadOrcamentoF.qryOrcamentoItem.FieldByName('QT_PRODUTO').Asinteger := 0;
 end;
 
 procedure TselecProdF.cancelBtnClick(Sender: TObject);

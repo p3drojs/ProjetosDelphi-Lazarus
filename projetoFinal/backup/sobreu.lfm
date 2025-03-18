@@ -1,17 +1,18 @@
 object sobreF: TsobreF
-  Left = 315
-  Height = 580
-  Top = 176
-  Width = 535
+  Left = 529
+  Height = 725
+  Top = 212
+  Width = 669
   Caption = 'SOBRE'
-  ClientHeight = 580
-  ClientWidth = 535
-  LCLVersion = '3.4.0.0'
+  ClientHeight = 725
+  ClientWidth = 669
+  DesignTimePPI = 120
+  LCLVersion = '3.8.0.0'
   object Memo1: TMemo
     Left = 0
-    Height = 138
+    Height = 172
     Top = 0
-    Width = 535
+    Width = 669
     Align = alTop
     Lines.Strings = (
       'Versão:1.0'

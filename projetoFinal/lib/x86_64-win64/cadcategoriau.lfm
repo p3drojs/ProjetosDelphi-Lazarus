@@ -6,11 +6,10 @@ inherited cadCategoriasF: TcadCategoriasF
   ClientHeight = 604
   OnClose = FormClose
   OnShow = FormShow
+  WindowState = wsFullScreen
   inherited mainPageControl: TPageControl
     Height = 604
     Width = 791
-    ActivePage = registerTab
-    TabIndex = 1
     inherited searchTab: TTabSheet
       ClientHeight = 571
       ClientWidth = 783
@@ -58,20 +57,32 @@ inherited cadCategoriasF: TcadCategoriasF
         Width = 783
         Columns = <        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'ID'
-            Width = 20
+            Width = 40
             FieldName = 'categoriaprodutoid'
           end        
           item
             Alignment = taCenter
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Layout = tlBottom
-            Title.Caption = 'DESCRIÇÃO:'
+            Title.Caption = 'DESCRIÇÃO'
             Width = 575
             FieldName = 'ds_categoria_produto'
           end>
         DataSource = dsCategorias
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
         OnDblClick = showGridDblClick
       end
     end

@@ -1,7 +1,7 @@
 object selectCadF: TselectCadF
-  Left = 723
+  Left = 893
   Height = 555
-  Top = 190
+  Top = 331
   Width = 651
   Caption = 'SELEÇÃO DE CATEGORIA'
   ClientHeight = 555
@@ -100,8 +100,9 @@ object selectCadF: TselectCadF
         Color = clWindow
         Columns = <        
           item
+            Title.Alignment = taCenter
             Title.Caption = 'ID'
-            Width = 25
+            Width = 40
             FieldName = 'categoriaprodutoid'
           end        
           item

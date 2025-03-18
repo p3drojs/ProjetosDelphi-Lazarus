@@ -47,6 +47,7 @@ uses cadProdutosU;
 
 {$R *.lfm}
 
+
 { TselectCadF }
 
 procedure TselectCadF.searchCatEdtChange(Sender: TObject);

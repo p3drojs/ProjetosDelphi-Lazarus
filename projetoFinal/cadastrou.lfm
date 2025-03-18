@@ -1,24 +1,27 @@
 inherited registerTabF: TregisterTabF
-  Left = 666
-  Height = 638
-  Top = 291
-  Width = 863
+  Left = -9
+  Height = 991
+  Top = -9
+  Width = 1920
   Caption = 'CADASTRO DE CLIENTES'
-  ClientHeight = 638
-  ClientWidth = 863
+  ClientHeight = 0
+  ClientWidth = 0
   OnClose = FormClose
   OnShow = FormShow
+  WindowState = wsFullScreen
   inherited mainPageControl: TPageControl
-    Height = 638
-    Width = 863
+    Height = 991
+    Width = 1920
+    ActivePage = registerTab
+    TabIndex = 1
     OnChange = mainPageControlChange
     inherited searchTab: TTabSheet
-      ClientHeight = 605
-      ClientWidth = 855
+      ClientHeight = 958
+      ClientWidth = 1912
       inherited topGroupBox: TGroupBox
-        Width = 855
+        Width = 1912
         ClientHeight = 106
-        ClientWidth = 851
+        ClientWidth = 1908
         inherited searchButton: TSpeedButton
           OnClick = searchButtonClick
         end
@@ -36,45 +39,61 @@ inherited registerTabF: TregisterTabF
         end
       end
       inherited bottomGroupBox: TGroupBox
-        Top = 474
-        Width = 855
+        Top = 827
+        Width = 1912
         ClientHeight = 106
-        ClientWidth = 851
+        ClientWidth = 1908
         inherited newButton: TSpeedButton
           Anchors = [akLeft]
           OnClick = newButtonClick
         end
         inherited leaveButton: TSpeedButton
-          Left = 720
+          Left = 1777
           Anchors = [akRight]
           OnClick = leaveButtonClick
         end
       end
       inherited showGrid: TDBGrid
-        Height = 343
+        Height = 696
         Top = 131
-        Width = 855
+        Width = 1912
         Columns = <        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'ID'
-            Width = 20
+            Width = 40
             FieldName = 'clienteid'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'TIPO'
-            Width = 30
+            Width = 45
             FieldName = 'tipo_cliente'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'CPF/CNPJ'
             Width = 90
             FieldName = 'cpf_cnpj_cliente'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
+            Title.Alignment = taCenter
             Title.Caption = 'NOME DO CLIENTE'
             Width = 180
             FieldName = 'nome_cliente'
@@ -89,29 +108,29 @@ inherited registerTabF: TregisterTabF
       end
     end
     inherited registerTab: TTabSheet
-      ClientHeight = 605
-      ClientWidth = 855
+      ClientHeight = 958
+      ClientWidth = 1912
       inherited saveButton: TSpeedButton
         Left = 32
-        Top = 544
+        Top = 870
         Anchors = [akLeft]
         OnClick = saveButtonClick
       end
       inherited editButton: TSpeedButton
         Left = 157
-        Top = 544
+        Top = 870
         Anchors = [akLeft]
         OnClick = editButtonClick
       end
       inherited excludeButton: TSpeedButton
         Left = 287
-        Top = 544
+        Top = 870
         Anchors = [akLeft]
         OnClick = excludeButtonClick
       end
       inherited goBackButton: TSpeedButton
-        Left = 712
-        Top = 544
+        Left = 1769
+        Top = 870
         Anchors = [akRight]
         OnClick = goBackButtonClick
       end

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPaiU, DB, seleCadProdU,dataModuleU;
+  ZSqlUpdate, ZDataset, ZAbstractRODataset, xCadPaiU, DB, seleCadProdU,dataModuleU, Grids, DBGrids;
 
 type
 
@@ -52,6 +52,8 @@ type
     procedure saveButtonClick(Sender: TObject);
     procedure searchButtonClick(Sender: TObject);
     procedure showGridDblClick(Sender: TObject);
+    procedure showGridDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
 
   public
@@ -163,6 +165,27 @@ procedure TcadProdutosF.showGridDblClick(Sender: TObject);
 begin
   mainPageControl.ActivePageIndex := 1;
   qryProdutos.Edit;
+end;
+
+procedure TcadProdutosF.showGridDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+Var
+    DateValue: TDateTime;
+begin
+  if (Column.Field.DataType = ftDate) or (Column.Field.DataType = ftDateTime) then
+  begin
+
+    DateValue := Column.Field.AsDateTime;
+
+
+    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2, FormatDateTime('dd/mm/yyyy', DateValue));
+  end
+  else
+  begin
+
+    showGrid.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+  end;
+
 end;
 
 end.

@@ -1,7 +1,7 @@
 object selecProdOrcaF: TselecProdOrcaF
-  Left = 806
+  Left = 542
   Height = 581
-  Top = 188
+  Top = 273
   Width = 764
   Caption = 'SELECIONE UM PRODUTO'
   ClientHeight = 581
@@ -73,8 +73,9 @@ object selecProdOrcaF: TselecProdOrcaF
     object BitBtn1: TBitBtn
       Left = 40
       Height = 38
-      Top = 30
+      Top = 40
       Width = 134
+      Anchors = [akLeft]
       Caption = 'SELECIONAR'
       Glyph.Data = {
         C6060000424DC60600000000000036000000280000001B000000140000000100
@@ -146,41 +147,70 @@ object selecProdOrcaF: TselecProdOrcaF
     Color = clWindow
     Columns = <    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Alignment = taCenter
         Title.Caption = 'ID'
-        Width = 25
+        Width = 40
         FieldName = 'produtoid'
       end    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Alignment = taCenter
         Title.Caption = 'ID CATEGORIA'
-        Width = 102
+        Width = 112
         FieldName = 'categoriaprodutoid'
       end    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
         Title.Caption = 'DESCRIÇÃO'
         Width = 112
         FieldName = 'ds_produto'
       end    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
         Title.Caption = 'OBSERVAÇÃO'
-        Width = 112
+        Width = 120
         FieldName = 'obs_produto'
       end    
       item
-        Title.Caption = 'VALOR VENDA'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Caption = 'VL.PRODUTO'
         Width = 112
         FieldName = 'vl_venda_produto'
       end    
       item
-        Title.Caption = 'DATA CADASTRO'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Caption = 'DT.CADASTRO'
         Width = 131
         FieldName = 'dt_cadastro_produto'
       end    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Alignment = taCenter
         Title.Caption = 'STATUS'
-        Width = 131
+        Width = 70
         FieldName = 'status_produto'
       end>
     DataSource = dsSelecProd
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
     ReadOnly = True
     TabOrder = 2
     OnDblClick = showProdGridDblClick

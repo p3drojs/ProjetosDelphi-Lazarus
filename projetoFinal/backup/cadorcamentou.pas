@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBGrids,
   DBCtrls, Buttons, LR_Class, LR_DBSet, ZDataset, ZSqlUpdate,
   ZAbstractRODataset, xCadPaiU, DB, dataModuleU, seleClienteOrcaU, selecProdU,
-  Types, LR_DSet;
+  Types, LR_DSet, Grids;
 
 type
 
@@ -23,6 +23,7 @@ type
     dtValidadeEdt: TDBEdit;
     frDbOrcamentoItem: TfrDBDataSet;
     frOrcamentoItem: TfrReport;
+    Label2: TLabel;
     qryOrcamentoItemprodutodesc: TZRawStringField;
     selecBtn: TSpeedButton;
     deleteBtn: TSpeedButton;
@@ -70,6 +71,8 @@ type
     procedure newButtonClick(Sender: TObject);
     procedure orcamentoItensGColExit(Sender: TObject);
     procedure orcamentoItensGDblClick(Sender: TObject);
+    procedure orcamentoItensGDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure qryOrcamentoAfterInsert(DataSet: TDataSet);
     procedure qryOrcamentoAfterPost(DataSet: TDataSet);
     procedure qryOrcamentoItemAfterInsert(DataSet: TDataSet);
@@ -80,7 +83,10 @@ type
     procedure searchButtonClick(Sender: TObject);
     procedure showGridDblClick(Sender: TObject);
     procedure selecBtnClick(Sender: TObject);
+    procedure showGridDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure toGBClick(Sender: TObject);
+    procedure topGroupBoxClick(Sender: TObject);
   private
 
   public
@@ -269,6 +275,23 @@ begin
   selecProdF.ShowModal;
 end;
 
+procedure TcadOrcamentoF.orcamentoItensGDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+var
+    DateValue: TDateTime;
+begin
+  if (Column.Field.DataType = ftDate) or (Column.Field.DataType = ftDateTime) then
+  begin
+    DateValue := Column.Field.AsDateTime;
+
+    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2, FormatDateTime('dd/mm/yyyy', DateValue));
+  end
+  else
+  begin
+    orcamentoItensG.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+  end;
+end;
+
 procedure TcadOrcamentoF.qryOrcamentoAfterInsert(DataSet: TDataSet);
 begin
   qryOrcamentoORCAMENTOID.AsInteger := StrToInt(dataModuleMD.getSequence('orcamento_orcamentoid_seq'));
@@ -346,7 +369,29 @@ qryOrcamento.Edit;
   end;
 end;
 
+procedure TcadOrcamentoF.showGridDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+var
+    DateValue: TDateTime;
+begin
+  if (Column.Field.DataType = ftDate) or (Column.Field.DataType = ftDateTime) then
+  begin
+    DateValue := Column.Field.AsDateTime;
+
+    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2, FormatDateTime('dd/mm/yyyy', DateValue));
+  end
+  else
+  begin
+    showGrid.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+  end;
+end;
+
 procedure TcadOrcamentoF.toGBClick(Sender: TObject);
+begin
+
+end;
+
+procedure TcadOrcamentoF.topGroupBoxClick(Sender: TObject);
 begin
 
 end;

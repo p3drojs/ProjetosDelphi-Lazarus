@@ -1,18 +1,17 @@
 inherited cadProdutosF: TcadProdutosF
-  Left = 418
+  Left = 472
   Height = 740
-  Top = 160
+  Top = 164
   Width = 830
   Caption = 'CADASTRO DE PRODUTOS'
   ClientHeight = 740
   ClientWidth = 830
   OnClose = FormClose
   OnShow = FormShow
+  WindowState = wsFullScreen
   inherited mainPageControl: TPageControl
     Height = 740
     Width = 830
-    ActivePage = registerTab
-    TabIndex = 1
     inherited searchTab: TTabSheet
       ClientHeight = 707
       ClientWidth = 822
@@ -57,48 +56,78 @@ inherited cadProdutosF: TcadProdutosF
         Width = 822
         Columns = <        
           item
+            Alignment = taCenter
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'ID:'
-            Width = 20
+            Title.Alignment = taCenter
+            Title.Caption = 'ID'
+            Width = 40
             FieldName = 'produtoid'
           end        
           item
+            Alignment = taCenter
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'CATEGORIA ID'
-            Width = 82
+            Title.Caption = 'ID CATEGORIA'
+            Width = 113
             FieldName = 'categoriaprodutoid'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'DESCRIÇÃO'
             Width = 130
             FieldName = 'ds_produto'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'OBSERVAÇÃO'
             Width = 130
             FieldName = 'obs_produto'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'VALOR DE VENDA'
+            Title.Caption = 'VL.VENDA'
             Width = 100
             FieldName = 'vl_venda_produto'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'DATA DE CADASTRO:'
+            Title.Caption = 'DT.CADASTRO'
             Width = 120
             FieldName = 'dt_cadastro_produto'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'STATUS:'
-            Width = 60
+            Title.Caption = 'STATUS'
+            Width = 64
             FieldName = 'status_produto'
           end>
         DataSource = dsProdutos
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnDrawColumnCell = showGridDrawColumnCell
         OnDblClick = showGridDblClick
       end
     end
@@ -373,6 +402,7 @@ inherited cadProdutosF: TcadProdutosF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '#,##.00'
       Precision = 15
       Currency = False
       MaxValue = 0
@@ -387,6 +417,7 @@ inherited cadProdutosF: TcadProdutosF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat.DateFormat = 'DD/MM/YYYY'
     end
     object qryProdutosstatus_produto: TZRawStringField
       FieldKind = fkData

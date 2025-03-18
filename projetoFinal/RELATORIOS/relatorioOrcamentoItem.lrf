@@ -7,7 +7,7 @@
     <KeyWords Value=""/>
     <Comments Value=""/>
     <ReportCreateDate Value="1899-12-30 00:00:00"/>
-    <ReportLastChange Value="2025-03-14 17:04:02"/>
+    <ReportLastChange Value="2025-03-18 14:19:17"/>
     <ReportVersionBuild Value=""/>
     <ReportVersionMajor Value=""/>
     <ReportVersionMinor Value=""/>
@@ -197,7 +197,7 @@
             <Left Value="236"/>
             <Top Value="36"/>
             <Width Value="232"/>
-            <Height Value="78"/>
+            <Height Value="94"/>
           </Size>
           <Flags Value="3"/>
           <FillColor Value="clNone"/>
@@ -211,7 +211,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="RELATORIO DE ORÇAMENTO&#xD;&#xA;"/>
+            <Memo Value="RELATORIO DO ORÇAMENTO [qryOrcamentoItem.&quot;orcamentoid&quot;]&#xD;&#xA;"/>
             <Script Value=""/>
             <GapX Value="0"/>
             <GapY Value="0"/>
@@ -715,7 +715,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="&#xD;&#xA;[qryOrcamentoItem.&quot;vl_unitario&quot;]&#xD;&#xA;"/>
+            <Memo Value="[qryOrcamentoItem.&quot;vl_unitario&quot;]&#xD;&#xA;&#xD;&#xA;"/>
             <Script Value=""/>
             <GapX Value="0"/>
             <GapY Value="0"/>
@@ -754,9 +754,9 @@
           <Typ Value="gtMemo"/>
           <StreamMode Value="0"/>
           <Size>
-            <Left Value="327"/>
+            <Left Value="331"/>
             <Top Value="238"/>
-            <Width Value="416"/>
+            <Width Value="412"/>
             <Height Value="20"/>
           </Size>
           <Flags Value="3"/>
@@ -810,9 +810,9 @@
           <Typ Value="gtMemo"/>
           <StreamMode Value="0"/>
           <Size>
-            <Left Value="508"/>
-            <Top Value="980"/>
-            <Width Value="228"/>
+            <Left Value="528"/>
+            <Top Value="976"/>
+            <Width Value="224"/>
             <Height Value="44"/>
           </Size>
           <Flags Value="3"/>
@@ -827,7 +827,7 @@
           <Data>
             <Format Value="556"/>
             <FormatStr Value=""/>
-            <Memo Value="VALOR TOTAL: [qryOrcamentoItem.&quot;vl_total&quot;]&#xD;&#xA;"/>
+            <Memo Value="VALOR TOTAL: R$[qryOrcamentoItem.&quot;vl_total&quot;]&#xD;&#xA;"/>
             <Script Value=""/>
             <GapX Value="0"/>
             <GapY Value="0"/>

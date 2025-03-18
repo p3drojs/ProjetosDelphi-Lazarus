@@ -61,7 +61,7 @@ procedure TseleClienteOrcaF.FormClose(Sender: TObject;
 begin
   qrySeleClienteOrca.close;
 end;
-//CHECAR CLIENTS, DELETE
+
 
 procedure TseleClienteOrcaF.goBackBtnClick(Sender: TObject);
 begin

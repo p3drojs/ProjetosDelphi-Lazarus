@@ -1,7 +1,7 @@
 object loginScreenF: TloginScreenF
-  Left = 827
+  Left = 731
   Height = 414
-  Top = 173
+  Top = 320
   Width = 796
   Caption = 'FAÇA O LOGIN'
   ClientHeight = 414
@@ -139,7 +139,7 @@ object loginScreenF: TloginScreenF
       3F3F373F3F00
     }
     OnClick = loginBtnClick
-    TabOrder = 1
+    TabOrder = 2
   end
   object nameEdt: TEdit
     Left = 70
@@ -154,7 +154,7 @@ object loginScreenF: TloginScreenF
     Top = 226
     Width = 174
     Caption = 'SAIR'
-    TabOrder = 2
+    TabOrder = 3
     OnClick = leaveBtnClick
   end
   object passWordEdt: TEdit
@@ -162,7 +162,7 @@ object loginScreenF: TloginScreenF
     Height = 28
     Top = 100
     Width = 174
-    TabOrder = 3
+    TabOrder = 1
   end
   object qryLogin: TZQuery
     Connection = dataModuleMD.mainConnection

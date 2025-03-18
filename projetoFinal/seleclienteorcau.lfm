@@ -19,25 +19,44 @@ object seleClienteOrcaF: TseleClienteOrcaF
     Color = clWindow
     Columns = <    
       item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Alignment = taCenter
         Title.Caption = 'ID'
         Width = 25
         FieldName = 'clienteid'
       end    
       item
-        Title.Caption = 'TIPO:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Alignment = taCenter
+        Title.Caption = 'TIPO'
         Width = 42
         FieldName = 'tipo_cliente'
       end    
       item
-        Title.Caption = 'CPF/CNPJ:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Caption = 'CPF/CNPJ'
         FieldName = 'cpf_cnpj_cliente'
       end    
       item
-        Title.Caption = 'NOME:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Title.Caption = 'NOME'
         Width = 138
         FieldName = 'nome_cliente'
       end>
     DataSource = dsSeleClienteOrcaU
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
     ReadOnly = True
     TabOrder = 0
     OnDblClick = showClientsGridDblClick

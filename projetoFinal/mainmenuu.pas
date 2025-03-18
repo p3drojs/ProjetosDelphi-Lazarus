@@ -5,8 +5,8 @@ unit mainMenuU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, LR_DBSet,
-  LR_Class, ZDataset, ZAbstractRODataset, cadastroU, cadCategoriaU,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
+  LR_DBSet, LR_Class, ZDataset, ZAbstractRODataset, cadastroU, cadCategoriaU,
   cadProdutosU, cadUsuariosU, cadOrcamentoU, relaClienteU, relProdU, relOrca,
   relCatU, sobreU;
 
@@ -23,6 +23,7 @@ type
     frRelOrcamento: TfrReport;
     frRelCategorias: TfrReport;
     frRelProdutos: TfrReport;
+    Image1: TImage;
     MainMenu1: TMainMenu;
     leaveButton: TMenuItem;
     clientsSubMenu: TMenuItem;
@@ -67,6 +68,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure leaveButtonClick(Sender: TObject);
     procedure orcaMenuClick(Sender: TObject);
     procedure orcaRelSubMenuClick(Sender: TObject);
@@ -158,6 +160,11 @@ begin
 end;
 
 procedure TmainMenuF.FormShow(Sender: TObject);
+begin
+
+end;
+
+procedure TmainMenuF.Image1Click(Sender: TObject);
 begin
 
 end;

@@ -5,14 +5,16 @@ unit sobreU;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
   { TsobreF }
 
   TsobreF = class(TForm)
+    Image1: TImage;
     Memo1: TMemo;
+    procedure Memo1Change(Sender: TObject);
   private
 
   public
@@ -25,6 +27,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TsobreF }
+
+procedure TsobreF.Memo1Change(Sender: TObject);
+begin
+
+end;
 
 end.
 

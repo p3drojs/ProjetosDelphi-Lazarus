@@ -1,27 +1,28 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 497
-  Height = 692
-  Top = 17
+  Left = 312
+  Height = 781
+  Top = 27
   Width = 1015
   Caption = 'ORÇAMENTOS'
-  ClientHeight = 692
+  ClientHeight = 781
   ClientWidth = 1015
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   inherited mainPageControl: TPageControl
-    Height = 692
+    Height = 781
     Width = 1015
     ActivePage = registerTab
     TabIndex = 1
     OnChange = mainPageControlChange
     inherited searchTab: TTabSheet
-      ClientHeight = 659
+      ClientHeight = 748
       ClientWidth = 1007
       inherited topGroupBox: TGroupBox
         Width = 1007
         ClientHeight = 106
         ClientWidth = 1003
+        OnClick = topGroupBoxClick
         inherited searchButton: TSpeedButton
           OnClick = searchButtonClick
         end
@@ -39,7 +40,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
         end
       end
       inherited bottomGroupBox: TGroupBox
-        Top = 528
+        Top = 617
         Width = 1007
         ClientHeight = 106
         ClientWidth = 1003
@@ -56,11 +57,14 @@ inherited cadOrcamentoF: TcadOrcamentoF
         end
       end
       inherited showGrid: TDBGrid
-        Height = 397
+        Height = 486
         Top = 131
         Width = 1007
         Columns = <        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Alignment = taCenter
             Title.Caption = 'ID'
@@ -68,56 +72,76 @@ inherited cadOrcamentoF: TcadOrcamentoF
             FieldName = 'orcamentoid'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'ID CLIENTE'
-            Width = 83
+            Width = 88
             FieldName = 'clienteid'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'DT.ORÇAMENTO'
-            Width = 120
+            Width = 130
             FieldName = 'dt_orcamento'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'DT.VALIDADE'
-            Width = 100
+            Width = 105
             FieldName = 'dt_validade_orcamento'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'VL.TOTAL'
             Width = 100
             FieldName = 'vl_total_orcamento'
           end>
         DataSource = dsOrcamento
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnDrawColumnCell = showGridDrawColumnCell
         OnDblClick = showGridDblClick
       end
     end
     inherited registerTab: TTabSheet
-      ClientHeight = 659
+      ClientHeight = 748
       ClientWidth = 1007
       OnContextPopup = registerTabContextPopup
       inherited saveButton: TSpeedButton
-        Left = 24
-        Top = 575
+        Left = 16
+        Top = 688
         Anchors = [akLeft]
         OnClick = saveButtonClick
       end
       inherited editButton: TSpeedButton
-        Left = 144
-        Top = 576
+        Left = 160
+        Top = 688
+        Anchors = [akLeft]
         OnClick = editButtonClick
       end
       inherited excludeButton: TSpeedButton
-        Left = 264
-        Top = 576
+        Left = 296
+        Top = 688
+        Anchors = [akLeft]
         OnClick = excludeButtonClick
       end
       inherited goBackButton: TSpeedButton
-        Left = 880
-        Top = 575
+        Left = 872
+        Top = 688
         Anchors = [akRight]
         OnClick = goBackButtonClick
       end
@@ -253,9 +277,9 @@ inherited cadOrcamentoF: TcadOrcamentoF
           OnChange = clientIDEdtChange
         end
         object clientShowButton: TButton
-          Left = 45
+          Left = 48
           Height = 25
-          Top = 76
+          Top = 81
           Width = 35
           Caption = '...'
           TabOrder = 5
@@ -349,10 +373,22 @@ inherited cadOrcamentoF: TcadOrcamentoF
           }
           OnClick = deleteBtnClick
         end
+        object Label2: TLabel
+          Left = 400
+          Height = 20
+          Top = 81
+          Width = 19
+          Caption = 'R$'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
       end
       object orcamentoItensG: TDBGrid[5]
         Left = 0
-        Height = 368
+        Height = 472
         Top = 168
         Width = 1007
         Align = alTop
@@ -368,6 +404,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
             FieldName = 'orcamentoitemid'
           end        
           item
+            Title.Alignment = taCenter
             Title.Font.CharSet = ANSI_CHARSET
             Title.Font.Pitch = fpVariable
             Title.Font.Quality = fqDraft
@@ -378,6 +415,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           end        
           item
             ReadOnly = True
+            Title.Alignment = taCenter
             Title.Font.CharSet = ANSI_CHARSET
             Title.Font.Pitch = fpVariable
             Title.Font.Quality = fqDraft
@@ -417,13 +455,15 @@ inherited cadOrcamentoF: TcadOrcamentoF
         ReadOnly = True
         TabOrder = 1
         OnColExit = orcamentoItensGColExit
+        OnDrawColumnCell = orcamentoItensGDrawColumnCell
         OnDblClick = orcamentoItensGDblClick
       end
       object imprimirBtn: TBitBtn[6]
-        Left = 384
+        Left = 432
         Height = 28
-        Top = 576
+        Top = 688
         Width = 99
+        Anchors = [akLeft]
         Caption = 'IMPRIMIR'
         Glyph.Data = {
           EE030000424DEE03000000000000360000002800000012000000110000000100
@@ -473,8 +513,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
       'select * from orcamento'
     )
     Params = <>
-    Left = 480
-    Top = 16
+    Left = 672
+    Top = 24
     object qryOrcamentoorcamentoid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoid'
@@ -501,6 +541,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat.DateFormat = 'DD/MM/YYYY'
     end
     object qryOrcamentodt_validade_orcamento: TZDateTimeField
       FieldKind = fkData
@@ -510,6 +551,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat.DateFormat = 'DD/MM/YYYY'
     end
     object qryOrcamentovl_total_orcamento: TZBCDField
       FieldKind = fkData
@@ -519,6 +561,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '#,##.00'
       Precision = 15
       Currency = False
       MaxValue = 0
@@ -579,21 +622,22 @@ inherited cadOrcamentoF: TcadOrcamentoF
   object dsOrcamentoItem: TDataSource[4]
     DataSet = qryOrcamentoItem
     OnDataChange = dsOrcamentoItemDataChange
-    Left = 824
-    Top = 360
+    Left = 784
+    Top = 480
   end
   object qryOrcamentoItem: TZQuery[5]
     Connection = dataModuleMD.mainConnection
     AfterInsert = qryOrcamentoItemAfterInsert
     AfterPost = qryOrcamentoAfterPost
     UpdateObject = updOrcamentoItem
+    Active = True
     SQL.Strings = (
       'select * from orcamento_item'
       ''
     )
     Params = <>
     Left = 704
-    Top = 488
+    Top = 480
     object qryOrcamentoItemorcamentoitemid: TZIntegerField
       FieldKind = fkData
       FieldName = 'orcamentoitemid'
@@ -643,6 +687,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '#,##.00'
       Precision = 15
       Currency = False
       MaxValue = 0
@@ -657,6 +702,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
+      DisplayFormat = '#,##.00'
       Precision = 15
       Currency = False
       MaxValue = 0
@@ -701,8 +747,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
       '  orcamento_item.orcamentoitemid = :OLD_orcamentoitemid'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 656
-    Top = 296
+    Left = 880
+    Top = 480
     ParamData = <    
       item
         Name = 'orcamentoid'
@@ -735,13 +781,13 @@ inherited cadOrcamentoF: TcadOrcamentoF
     Options = []
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
     DataType = dtDataSet
-    Left = 584
-    Top = 224
+    Left = 536
+    Top = 480
   end
   object frDbOrcamentoItem: TfrDBDataSet[8]
     DataSet = qryOrcamentoItem
     OnCheckEOF = frDbOrcamentoItemCheckEOF
-    Left = 640
-    Top = 400
+    Left = 624
+    Top = 480
   end
 end

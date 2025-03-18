@@ -1,7 +1,7 @@
 object loginScreenF: TloginScreenF
-  Left = 827
+  Left = 1048
   Height = 414
-  Top = 173
+  Top = 332
   Width = 796
   Caption = 'FAÇA O LOGIN'
   ClientHeight = 414

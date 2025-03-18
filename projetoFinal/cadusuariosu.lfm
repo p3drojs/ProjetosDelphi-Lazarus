@@ -55,21 +55,31 @@ inherited cadUsuariosF: TcadUsuariosF
         Width = 820
         Columns = <        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'ID:'
-            Width = 20
+            Title.Alignment = taCenter
+            Title.Caption = 'ID'
+            Width = 40
             FieldName = 'id'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
-            Title.Caption = 'USUARIO:'
-            Width = 70
+            Title.Caption = 'USUARIO'
+            Width = 80
             FieldName = 'usuario'
           end        
           item
+            Font.CharSet = ANSI_CHARSET
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
             PickList.Strings = (            )
             Title.Caption = 'NOME COMPLETO'
-            Width = 120
+            Width = 140
             FieldName = 'nome_completo'
           end>
         DataSource = dsUsuarios

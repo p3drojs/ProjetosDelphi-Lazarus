@@ -8,8 +8,7 @@
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo" />
-  <img src="![icons8-pascal-48](https://github.com/user-attachments/assets/17b3bd27-291d-4cde-b9b4-0550c63d7af3)
-" height="40" alt="Pascal logo" />
+  <img src="https://img.icons8.com/?size=100&id=JIca3PdDDoXN&format=png&color=000000" height="40" alt="Pascal logo" />
 </div>
 
 ###

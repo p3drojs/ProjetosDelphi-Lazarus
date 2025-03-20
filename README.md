@@ -7,7 +7,8 @@
 ###
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo" />
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40mwendakelvinblog%2Fobject-pascal-the-language-that-brought-object-oriented-programming-to-delphi-6536dd731d47&psig=AOvVaw1lSfhtiG3WYtyLTfFfczOz&ust=1742562997020000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCT7ZbfmIwDFQAAAAAdAAAAABAJ" height="40" alt="Pascal logo" />
 </div>
 
 ###
